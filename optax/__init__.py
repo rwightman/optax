@@ -30,6 +30,11 @@ from optax._src.combine import chain
 from optax._src.control_variates import control_delta_method
 from optax._src.control_variates import control_variates_jacobians
 from optax._src.control_variates import moving_avg_baseline
+from optax._src.loss import cosine_distance
+from optax._src.loss import huber_loss
+from optax._src.loss import l2_loss
+from optax._src.loss import smooth_labels
+from optax._src.loss import softmax_cross_entropy
 from optax._src.schedule import constant_schedule
 from optax._src.schedule import cosine_decay_schedule
 from optax._src.schedule import cosine_onecycle_schedule
@@ -137,6 +142,7 @@ __all__ = (
     "control_delta_method",
     "control_variates_jacobians",
     "cosine_decay_schedule",
+    "cosine_distance",
     "cosine_onecycle_schedule",
     "exponential_decay",
     "fisher_diag",
@@ -145,6 +151,7 @@ __all__ = (
     "global_norm",
     "GradientTransformation",
     "hessian_diag",
+    "huber_loss",
     "hvp",
     "identity",
     "incremental_update",
@@ -152,6 +159,7 @@ __all__ = (
     "lookahead",
     "LookaheadParams",
     "LookaheadState",
+    "l2_loss",
     "linear_onecycle_schedule",
     "masked",
     "MaskedState",
@@ -189,6 +197,8 @@ __all__ = (
     "Schedule",
     "score_function_jacobians",
     "sgd",
+    "smooth_labels",
+    "softmax_cross_entropy",
     "trace",
     "TraceState",
     "TransformInitFn",
